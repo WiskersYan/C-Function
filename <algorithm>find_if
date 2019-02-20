@@ -1,0 +1,25 @@
+/*
+查找范围内的元素
+返回到[first，last]范围内第一个元素的迭代器，其中pred返回true。 如果找不到这样的元素，则该函数返回最后。
+*/
+#include <iostream>     // std::cout
+#include <algorithm>    // std::find_if
+#include <vector>       // std::vector
+
+bool IsOdd (int i) {
+  return ((i%2)==1);
+}
+
+int main () {
+  std::vector<int> myvector;
+
+  myvector.push_back(10);
+  myvector.push_back(25);
+  myvector.push_back(40);
+  myvector.push_back(55);
+
+  std::vector<int>::iterator it = std::find_if (myvector.begin(), myvector.end(), IsOdd);
+  std::cout << "The first odd value is " << *it << '\n';
+
+  return 0;
+}
