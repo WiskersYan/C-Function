@@ -1,0 +1,34 @@
+/*
+cin.getline() 函数使用两个用逗号分隔的参数。
+第一个参数是要存储字符串的数组的名称。
+第二个参数是数组的大小。当 cin.getline() 语句执行时，cin 读取的字符数将比该数字少一个，为 null 终止符留出空间。
+这样就不需要使用 setw 操作符或 width 函数。以上语句最多可读取 (size-1) 个字符，null 终止符将自动放在数组最后一个字符的后面。
+*/
+#include <iostream>
+using namespace std;
+
+const int SIZE=8;
+int main( ) {
+	char ch[SIZE];
+	cout<<"Enter a sentence."<<endl;
+	cin.getline(ch,SIZE);
+	cout<<"Your sentence is "<<ch<<endl; 
+	return 0;
+}
+
+/*
+当用在多维数组中的时候，也可以用cin.getline(m[i],20)之类的用法
+*/
+#include <iostream>
+using namespace std;
+int main( ) {
+	char ch[3][20];
+	for(int i=0;i<3;i++){
+		cout<<"请输入第"<<i+1<<"个字符串"<<endl;
+		 cin.getline(ch[i],20);
+	}
+	for(int i=0;i<3;i++){
+		cout<<"输出ch["<<i<<"]的值"<<ch[i]<<endl;
+	}
+	return 0;
+}
