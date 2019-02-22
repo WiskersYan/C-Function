@@ -1,0 +1,23 @@
+/*
+函数原型：istream& getline ( istream &is , string &str , char delim );
+
+is:istream类的输入流对象，譬如cin；
+str:待输入的string对象，表示把从输入流读入的字符串存放在这个字符串中（可以自己随便命名，str什么的都可以）；
+delim：表示遇到这个字符停止读入，在不设置的情况下系统默认该字符为’\n’，也就是回车换行符（遇到回车停止读入）。
+*/
+#include <iostream>
+#include <string>
+using namespace std;
+int main( ) {
+	string Fstr,Sstr,Tstr;
+	cout<<"First string:"<<endl;
+	getline(cin,Fstr);
+	cout<<"Second string:"<<endl;
+	getline(cin,Sstr);
+	cout<<"Third string:"<<endl;
+	getline(cin,Tstr,'#');
+	cout<<"First str:"<<Fstr<<endl;
+	cout<<"Second Sstr:"<<Sstr<<endl;
+	cout<<"Third Sstr:"<<Tstr<<endl;
+	return 0;
+}
