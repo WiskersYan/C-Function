@@ -1,0 +1,18 @@
+/*
+gets函数原型：chargets(charbuffer);//读取字符到数组：gets(str);str为数组名。
+gets函数功能：从键盘上输入字符，直至接受到换行符或EOF时停止，并将读取的结果存放在buffer指针所指向的字符数组中。
+读取的换行符被转换为null值，做为字符数组的最后一个字符，来结束字符串。
+注意：gets函数由于没有指定输入字符大小，所以会无限读取，一旦输入的字符大于数组长度，就会发生内存越界， 从而造成程序崩溃或其他数据的错误。
+*/
+#include<iostream>
+#include <string>
+using namespace std;
+int main( ) {
+    char ch1[20];
+    char ch2[20];
+    gets(ch1);
+    cout<<ch1<<endl;
+    gets(ch2);
+    cout<<ch2<<endl;
+    return 0;
+}
