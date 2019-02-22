@@ -1,0 +1,46 @@
+/*
+cin.get() 函数是内置在 cin 对象中的，所以可称之为 cin 的一个成员函数。
+get( char*, int, char );
+get( char& );
+cin.get() 成员函数读取单个字符，包括任何白色空格字符	。
+*/
+#include <iostream>
+using namespace std;
+
+int main( ) {
+	char ch;
+	cout << "This program has paused. Press Enter to continue.";
+	cin.get(ch);
+	cout << "It has paused a second time. Please press Enter again.";
+	ch = cin.get();
+	cout << "It has paused a third time. Please press Enter again.";
+	cin.get();
+	cout << "Thank you!\n";
+	return 0;
+}
+
+/*
+ cin.get(字符变量名)可以用来接收字符
+*/
+#include <iostream>
+using namespace std;
+
+int main( ) {
+	char ch;
+	ch=cin.get();   //或者cin.get(ch);
+	cout<<ch<<endl;
+	return 0;
+}
+
+/*
+cin.get(字符数组名,接收字符数目)用来接收一行字符串,可以接收空格
+*/
+#include <iostream>
+using namespace std;
+
+int main( ) {
+	char ch[10];
+	cin.get(ch,10);
+	cout<<ch<<endl;
+	return 0;
+}
