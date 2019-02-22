@@ -1,0 +1,63 @@
+/*
+标准输入流
+程序的输入都有一个输入缓冲区。输入过程中，一次键盘输入结束时会立即将输入的数据存入输入缓冲区，
+cin函数则直接从输入缓冲区中取数据，当缓冲区有残留的数据时，cin函数会直接取得这些残留数据，而不会请求输入。
+*/
+#include <iostream>
+using namespace std;
+
+int main( ) {
+	string str;
+	cout<<"Test"<<endl;
+	cin>>str;
+	cout<<str<<endl;
+	cin>>str;
+	cout<<str<<endl;
+	return 0;
+}
+
+/*
+函数cin.sync()可以清空输入缓冲区。
+*/
+#include <iostream>
+using namespace std;
+
+int main( ) {
+	string str;
+	cout<<"Test"<<endl;
+	cin>>str;
+	cin.sync();
+	cout<<str<<endl;
+	cin>>str;
+	cout<<str<<endl;
+	return 0;
+}
+
+/*
+输入一个数字
+*/
+#include <iostream>
+using namespace std;
+
+int main() {
+	int number; 
+	cout << "输入一个整数: ";
+	cin >> number;
+	cout << "输入的数字为: " << number;
+	return 0;
+}
+
+/*
+输入一个字符串，遇【空格】、【TAB】、【回车】都结束
+*/
+#include <iostream>
+using namespace std;
+ 
+int main( )
+{
+   char name[50];
+   cout << "请输入您的名称： ";
+   cin >> name;
+   cout << "您的名称是： " << name << endl;
+   return 0;
+}
