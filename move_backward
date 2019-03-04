@@ -1,0 +1,25 @@
+# 向后移动元素范围
+# 将结束时从[end，last]开始的元素移动到结束时终止的范围内。
+# 该函数将迭代器返回到目标范围中的第一个元素。
+# 结果范围的元素与[first，last]的顺序完全相同。 要颠倒他们的顺序，请参阅反向。
+# 该函数首先将*（last-1）移动到*（result-1）中，然后通过前面的元素向后移动，直到第一次到达（并包括它）。
+# 范围不应该以这样的方式重叠：结果（目标范围中的过去元素）指向范围内的元素（first，last）。对于这种情况，请参见move。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::move_backward
+#include <string>       // std::string
+
+int main () {
+  std::string elems[10] = {"air","water","fire","earth"};
+
+  // insert new element at the beginning:
+  std::move_backward (elems,elems+4,elems+5);
+  elems[0]="ether";
+
+  std::cout << "elems contains:";
+  for (int i=0; i<10; ++i)
+    std::cout << " [" << elems[i] << "]";
+  std::cout << '\n';
+
+  return 0;
+}
