@@ -1,7 +1,8 @@
-/*
-查找范围内的元素
-返回到[first，last]范围内第一个元素的迭代器，其中pred返回true。 如果找不到这样的元素，则该函数返回最后。
-*/
+
+# 查找范围内的元素
+# 返回到[first，last]范围内第一个元素的迭代器，
+# 其中pred返回true。 如果找不到这样的元素，则该函数返回最后。
+
 #include <iostream>     // std::cout
 #include <algorithm>    // std::find_if
 #include <vector>       // std::vector
