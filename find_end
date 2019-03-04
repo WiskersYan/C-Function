@@ -1,7 +1,7 @@
-/*
-查找范围中的最后一个子序列
-在范围[first1，last1]中搜索由[first2，last2]定义的序列的最后一次出现，并将迭代器返回到其第一个元素，如果没有找到则出现last1。
-*/
+# 查找范围中的最后一个子序列
+# 在范围[first1，last1]中搜索由[first2，last2]定义的序列的最后一次出现，
+# 并将迭代器返回到其第一个元素，如果没有找到则出现last1。
+
 #include <iostream>     // std::cout
 #include <algorithm>    // std::find_end
 #include <vector>       // std::vector
