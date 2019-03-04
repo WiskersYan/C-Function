@@ -1,0 +1,28 @@
+# 对范围内的元素进行部分排序
+# 重新排列[first，last]范围内的元素，使得中间的元素是整个范围中的最小元素，并按升序排序，而其余元素没有任何特定顺序。
+# 使用operator <作为第一个版本比较元素，comp作为第二个版本。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::partial_sort
+#include <vector>       // std::vector
+
+bool myfunction (int i,int j) { return (i<j); }
+
+int main () {
+  int myints[] = {9,8,7,6,5,4,3,2,1};
+  std::vector<int> myvector (myints, myints+9);
+
+  // using default comparison (operator <):
+  std::partial_sort (myvector.begin(), myvector.begin()+5, myvector.end());
+
+  // using function as comp
+  std::partial_sort (myvector.begin(), myvector.begin()+5, myvector.end(),myfunction);
+
+  // print out content:
+  std::cout << "myvector contains:";
+  for (std::vector<int>::iterator it=myvector.begin(); it!=myvector.end(); ++it)
+    std::cout << ' ' << *it;
+  std::cout << '\n';
+
+  return 0;
+}
