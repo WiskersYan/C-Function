@@ -1,0 +1,27 @@
+# 交换两个范围的值
+# 将[first1，last1]范围内的每个元素的值与first2开始范围内各自元素的值进行交换。
+# 该函数调用swap（非限定）来交换元素。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::swap_ranges
+#include <vector>       // std::vector
+
+int main () {
+  std::vector<int> foo (5,10);        // foo: 10 10 10 10 10
+  std::vector<int> bar (5,33);        // bar: 33 33 33 33 33
+
+  std::swap_ranges(foo.begin()+1, foo.end()-1, bar.begin());
+
+  // print out results of swap:
+  std::cout << "foo contains:";
+  for (std::vector<int>::iterator it=foo.begin(); it!=foo.end(); ++it)
+    std::cout << ' ' << *it;
+  std::cout << '\n';
+
+  std::cout << "bar contains:";
+  for (std::vector<int>::iterator it=bar.begin(); it!=bar.end(); ++it)
+    std::cout << ' ' << *it;
+  std::cout << '\n';
+
+  return 0;
+}
