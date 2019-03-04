@@ -1,7 +1,7 @@
-/*
-查找范围内的值
-返回范围[first，last]中与val相等的第一个元素的迭代器。 如果找不到这样的元素，则该函数返回最后。
-*/
+# 查找范围内的值
+# 返回范围[first，last]中与val相等的第一个元素的迭代器。 
+# 如果找不到这样的元素，则该函数返回最后。
+
 #include <iostream>     // std::cout
 #include <algorithm>    // std::find
 #include <vector>       // std::vector
