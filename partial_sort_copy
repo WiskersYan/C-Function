@@ -1,0 +1,31 @@
+# 复制和部分排序范围
+# 将[first_ last]范围内的最小元素复制到[result_first，result_last]，
+# 对复制的元素进行排序。复制的元素数与result_first和result_last之间的
+# 距离相同（除非这超过[first，last）中的元素数量）。
+# 范围[first，last]不会被修改。
+# 使用operator <作为第一个版本比较元素，comp作为第二个版本。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::partial_sort_copy
+#include <vector>       // std::vector
+
+bool myfunction (int i,int j) { return (i<j); }
+
+int main () {
+  int myints[] = {9,8,7,6,5,4,3,2,1};
+  std::vector<int> myvector (5);
+
+  // using default comparison (operator <):
+  std::partial_sort_copy (myints, myints+9, myvector.begin(), myvector.end());
+
+  // using function as comp
+  std::partial_sort_copy (myints, myints+9, myvector.begin(), myvector.end(), myfunction);
+
+  // print out content:
+  std::cout << "myvector contains:";
+  for (std::vector<int>::iterator it=myvector.begin(); it!=myvector.end(); ++it)
+    std::cout << ' ' << *it;
+  std::cout << '\n';
+
+  return 0;
+}
