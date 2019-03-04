@@ -1,7 +1,7 @@
-/*
-从范围内的集合中查找元素
-返回[first1，last1]范围内与[first2，last2]中的任何元素匹配的第一个元素的迭代器。 如果找不到这样的元素，则该函数返回last1。
-*/
+# 从范围内的集合中查找元素
+# 返回[first1，last1]范围内与[first2，last2]中的任何元素匹配的第一个元素的迭代器。 
+# 如果找不到这样的元素，则该函数返回last1。
+
 #include <iostream>     // std::cout
 #include <algorithm>    // std::find_first_of
 #include <vector>       // std::vector
