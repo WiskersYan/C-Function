@@ -1,3 +1,8 @@
+# 复制元素范围
+# 将[first，last]范围内的元素复制到从result开始的范围内。
+# 该函数将迭代器返回到目标范围的末尾（指向复制的最后一个元素后面的元素）。
+# 范围不应以结果指向[first，last]范围内的元素的方式重叠。 对于此类情况，请参阅copy_backward。
+
 #include <iostream>     // std::cout
 #include <algorithm>    // std::copy
 #include <vector>       // std::vector
