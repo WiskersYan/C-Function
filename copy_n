@@ -1,5 +1,11 @@
+# 复制元素
+# 将从第一个开始的范围中的前n个元素复制到从结果开始的范围。
+# 该函数将迭代器返回到目标范围的末尾（指向复制的最后一个元素之后的一个）。
+# 如果n为负数，则该函数不执行任何操作。
+# 如果范围重叠，则结果指向的范围中的某些元素可能具有未定义但有效的值。
+
 #include <iostream>     // std::cout
-#include <algorithm>    // std::copy
+#include <algorithm>    // std::copy_n
 #include <vector>       // std::vector
 
 int main () {
