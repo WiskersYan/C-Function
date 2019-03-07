@@ -1,0 +1,16 @@
+# 返回最小和最大的元素
+# 返回一对最小的a和b作为第一个元素，最大的作为第二个元素。 如果两者都是等价的，则函数返回make_pair（a，b）。
+# initializer lists (3)的版本返回一对，列表中所有元素中的最小元素作为第一个元素（第一个元素，如果有多个元素），
+# 最大的元素作为第二个元素（最后一个，如果有的话，最后一个，如果 不止一个）。
+# 该函数使用operator <（或comp，如果提供）来比较值。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::minmax
+
+int main () {
+  auto result = std::minmax({1,2,3,4,5});
+
+  std::cout << "minmax({1,2,3,4,5}): ";
+  std::cout << result.first << ' ' << result.second << '\n';
+  return 0;
+}
