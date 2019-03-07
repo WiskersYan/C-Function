@@ -1,0 +1,15 @@
+# 返回最大的
+# 返回a和b中的最大值。 如果两者都是等价的，则返回a。
+# 初始化列表（3）的版本返回列表中所有元素中最大的一个。 如果这些不止一个，则返回第一个。
+# 该函数使用operator <（或comp，如果提供）来比较值。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::max
+
+int main () {
+  std::cout << "max(1,2)==" << std::max(1,2) << '\n';
+  std::cout << "max(2,1)==" << std::max(2,1) << '\n';
+  std::cout << "max('a','z')==" << std::max('a','z') << '\n';
+  std::cout << "max(3.14,2.73)==" << std::max(3.14,2.73) << '\n';
+  return 0;
+}
