@@ -1,0 +1,23 @@
+# 返回范围内的最小和最大元素
+# 返回一个迭代器对，该迭代器指向范围[first，last]中最小值为第一个元素的元素，最大值为第二个元素。
+# 使用运算符<对于第一个版本执行比较，或对于第二个版本执行comp。
+# 如果多个等效元素具有最小值，则第一个迭代器指向第一个这样的元素。
+# 如果多个等效元素具有最大值，则第二个迭代器指向最后一个这样的元素。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::minmax_element
+#include <array>        // std::array
+
+int main () {
+  std::array<int,7> foo {3,7,2,9,5,8,6};
+
+  auto result = std::minmax_element (foo.begin(),foo.end());
+
+  // print result:
+  std::cout << "min is " << *result.first;
+  std::cout << ", at position " << (result.first-foo.begin()) << '\n';
+  std::cout << "max is " << *result.second;
+  std::cout << ", at position " << (result.second-foo.begin()) << '\n';
+
+  return 0;
+}
