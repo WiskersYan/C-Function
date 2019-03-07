@@ -1,0 +1,15 @@
+# 返回最小的
+# 返回a和b中的最小值。 如果两者都是等价的，则返回a。
+# 初始化列表（3）的版本返回列表中所有元素中最小的元素。 如果这些不止一个，则返回第一个。
+# 该函数使用operator <（或comp，如果提供）来比较值。
+
+#include <iostream>     // std::cout
+#include <algorithm>    // std::min
+
+int main () {
+  std::cout << "min(1,2)==" << std::min(1,2) << '\n';
+  std::cout << "min(2,1)==" << std::min(2,1) << '\n';
+  std::cout << "min('a','z')==" << std::min('a','z') << '\n';
+  std::cout << "min(3.14,2.72)==" << std::min(3.14,2.72) << '\n';
+  return 0;
+}
