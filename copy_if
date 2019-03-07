@@ -1,3 +1,6 @@
+# 复制范围的某些元素
+# 将pred返回true的范围[first，last]中的元素复制到以result开头的范围。
+
 #include <iostream>     // std::cout
 #include <algorithm>    // std::copy_if, std::distance
 #include <vector>       // std::vector
