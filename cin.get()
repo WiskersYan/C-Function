@@ -4,6 +4,7 @@ get( char*, int, char );
 get( char& );
 cin.get() 成员函数读取单个字符，包括任何白色空格字符	。
 */
+
 #include <iostream>
 using namespace std;
 
