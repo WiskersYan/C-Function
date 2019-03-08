@@ -4,6 +4,7 @@ cin.getline() 函数使用两个用逗号分隔的参数。
 第二个参数是数组的大小。当 cin.getline() 语句执行时，cin 读取的字符数将比该数字少一个，为 null 终止符留出空间。
 这样就不需要使用 setw 操作符或 width 函数。以上语句最多可读取 (size-1) 个字符，null 终止符将自动放在数组最后一个字符的后面。
 */
+
 #include <iostream>
 using namespace std;
 
