@@ -1,0 +1,21 @@
+/*
+将字符串转换为double
+解析str将其内容解释为浮点数，该值返回为double类型的值。
+
+如果idx不是空指针，则该函数还将idx的值设置为数字后str中第一个字符的位置。
+
+该函数使用strtod（或wcstod）来执行转换（有关该过程的更多详细信息，请参阅strtod）。 请注意，这些函数接受的格式取决于当前的语言环境。
+*/
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::stod
+
+int main ()
+{
+  std::string orbits ("365.24 29.53");
+  std::string::size_type sz;     // alias of size_t
+
+  double earth = std::stod (orbits,&sz);
+  double moon = std::stod (orbits.substr(sz));
+  std::cout << "The moon completes " << (earth/moon) << " orbits per Earth year.\n";
+  return 0;
+}
