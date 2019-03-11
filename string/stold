@@ -1,0 +1,21 @@
+/*
+将字符串转换为long double
+解析str将其内容解释为浮点数，该值作为long double类型返回。
+
+如果idx不是空指针，则该函数还将idx的值设置为数字后str中第一个字符的位置。
+
+该函数使用strtold（或wcstold）来执行转换（有关该过程的更多详细信息，请参阅strtod）。
+*/
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::stod
+
+int main ()
+{
+  std::string orbits ("90613.305 365.24");
+  std::string::size_type sz;     // alias of size_t
+
+  long double pluto = std::stod (orbits,&sz);
+  long double earth = std::stod (orbits.substr(sz));
+  std::cout << "Pluto takes " << (pluto/earth) << " years to complete an orbit.\n";
+  return 0;
+}
