@@ -1,0 +1,27 @@
+/*
+将数值转换为宽字符串
+返回表示为val的wstring。
+使用的格式与wprintf为相应类型打印的格式相同：
+val的类型	wprintf等价物	描述
+int	L"%d"	val的十进制基表示。负值的表示前面带有减号（ - ）
+long	L"%ld"	同上
+long long	L"%lld"	同上
+unsigned	L"%u"	val的十进制基表示
+unsigned long	L"%lu"	同上
+unsigned long long	L"%llu"	同上
+float	L"%f"	根据需要写入多个数字来表示整数部分，然后是小数点字符和六个十进制数字。inf（或无穷大）用于表示无穷大。nan（后跟可选的字符序列）表示NaNs（非数字）。负值的表示前面带有减号（ - ）
+double	L"%f"	同上
+long double	“%Lf”	同上
+*/
+
+#include <iostream>   // std::wcout
+#include <string>     // std::wstring, std::to_wstring
+
+int main ()
+{
+  std::wstring pi = L"pi is " + std::to_wstring(3.1415926);
+  std::wstring perfect = std::to_wstring(1+2+4+7+14) + L" is a perfect number";
+  std::wcout << pi << L'\n';
+  std::wcout << perfect << L'\n';
+  return 0;
+}
