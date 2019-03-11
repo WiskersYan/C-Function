@@ -1,0 +1,19 @@
+/*
+将字符串转换为float
+解析str将其内容解释为浮点数，该值作为float类型返回。
+如果idx不是空指针，则该函数还将idx的值设置为数字后str中第一个字符的位置。
+该函数使用strtod（或wcstod）来执行转换（有关该过程的更多详细信息，请参阅strtod）。 请注意，这些函数接受的格式取决于当前的语言环境。
+*/
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::stof
+
+int main ()
+{
+  std::string orbits ("686.97 365.24");
+  std::string::size_type sz;     // alias of size_t
+
+  float mars = std::stof (orbits,&sz);
+  float earth = std::stof (orbits.substr(sz));
+  std::cout << "One martian year takes " << (mars/earth) << " Earth years.\n";
+  return 0;
+}
