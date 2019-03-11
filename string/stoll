@@ -1,0 +1,23 @@
+/*
+将字符串转换为long long
+解析str将其内容解释为指定基数的整数，并将其作为long long类型的值返回。
+如果idx不是空指针，则该函数还将idx的值设置为数字后str中第一个字符的位置。
+该函数使用strtoll（或wcstoll）来执行转换（有关该过程的更多详细信息，请参阅strtol）。
+*/
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::stoll
+
+int main ()
+{
+  std::string str = "8246821 0xffff 020";
+
+  std::string::size_type sz = 0;   // alias of size_t
+
+  while (!str.empty()) {
+    long long ll = std::stoll (str,&sz,0);
+    std::cout << str.substr(0,sz) << " interpreted as " << ll << '\n';
+    str = str.substr(sz);
+  }
+
+  return 0;
+}
