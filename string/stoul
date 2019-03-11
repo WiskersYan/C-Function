@@ -1,0 +1,18 @@
+/*
+将字符串转换为无符号整数
+解析str将其内容解释为指定基数的整数，该基数作为无符号长整数值返回。
+如果idx不是空指针，则该函数还将idx的值设置为数字后str中第一个字符的位置。
+该函数使用strtoul（或wcstoul）执行转换（有关该过程的更多详细信息，请参阅strtol）。
+*/
+#include <iostream>   // std::cin, std::cout
+#include <string>     // std::string, std::stoul, std::getline
+
+int main ()
+{
+  std::string str;
+  std::cout << "Enter an unsigned number: ";
+  std::getline (std::cin,str);
+  unsigned long ul = std::stoul (str,nullptr,0);
+  std::cout << "You entered: " << ul << '\n';
+  return 0;
+}
