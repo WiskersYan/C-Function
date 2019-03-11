@@ -1,0 +1,27 @@
+/*
+将数值转换为字符串
+返回表示为val的字符串。
+使用的格式与printf为相应类型打印的格式相同：
+val的类型	printf等价物	描述
+int	“%d”	val的十进制基表示。负值的表示前面带有减号（ - ）
+long	“%ld”	同上
+long long	“%lld”	同上
+unsigned	“%u”	val的十进制基表示
+unsigned long	“%lu”	同上
+unsigned long long	“%llu”	同上
+float	“%f”	根据需要写入多个数字来表示整数部分，然后是小数点字符和六个十进制数字。inf（或无穷大）用于表示无穷大。nan（后跟可选的字符序列）表示NaNs（非数字）。负值的表示前面带有减号（ - ）
+double	“%f”	同上
+long double	“%Lf”	同上
+*/
+
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::to_string
+
+int main ()
+{
+  std::string pi = "pi is " + std::to_string(3.1415926);
+  std::string perfect = std::to_string(1+2+4+7+14) + " is a perfect number";
+  std::cout << pi << '\n';
+  std::cout << perfect << '\n';
+  return 0;
+}
