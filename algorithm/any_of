@@ -1,0 +1,19 @@
+/*
+测试范围内的任何元素是否满足条件
+
+如果pred对范围[first，last]中的任何元素返回true，则返回true，否则返回false。
+
+如果[first，last）是空范围，则该函数返回false。
+*/
+#include <iostream>     // std::cout
+#include <algorithm>    // std::any_of
+#include <array>        // std::array
+
+int main () {
+  std::array<int,7> foo = {0,1,-1,3,-3,5,-5};
+
+  if ( std::any_of(foo.begin(), foo.end(), [](int i){return i<0;}) )
+    std::cout << "There are negative elements in the range.\n";
+
+  return 0;
+}
