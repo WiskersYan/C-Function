@@ -1,0 +1,19 @@
+/*
+测试范围内所有元素的条件
+
+如果pred对范围[first，last]中的所有元素返回true或者范围为空，则返回true，否则返回false。
+*/
+#include <iostream>     // std::cout
+#include <algorithm>    // std::all_of
+#include <array>        // std::array
+
+int main () {
+	std::array<int,8> foo = {3,5,7,11,13,17,19,23};
+
+	if ( std::all_of(foo.begin(), foo.end(), [](int i) {
+	return i%2;
+}) )
+	std::cout << "All the elements are odd numbers.\n";
+
+	return 0;
+}
