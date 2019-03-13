@@ -1,0 +1,27 @@
+/*
+构造前插入迭代器
+构造一个前插入迭代器，在x的开头插入新元素。
+前插入迭代器是一种特殊类型的输出迭代器，旨在允许通常覆盖元素（例如复制）的算法在容器的开头自动插入新元素。
+x的类型需要具有push_front成员函数（例如标准容器deque和list）。
+在返回的迭代器上使用赋值运算符（取消引用或不引用），使容器扩展一个元素，该元素初始化为指定的值。
+返回的迭代器支持输出迭代器的所有其他典型操作，但不起作用：分配的所有值都插入容器的开头。
+*/
+#include <iostream>     // std::cout
+#include <iterator>     // std::front_inserter
+#include <deque>        // std::deque
+#include <algorithm>    // std::copy
+
+int main () {
+  std::deque<int> foo,bar;
+  for (int i=1; i<=5; i++)
+  { foo.push_back(i); bar.push_back(i*10); }
+
+  std::copy (bar.begin(),bar.end(),std::front_inserter(foo));
+
+  std::cout << "foo contains:";
+  for ( std::deque<int>::iterator it = foo.begin(); it!= foo.end(); ++it )
+	  std::cout << ' ' << *it;
+  std::cout << '\n';
+
+  return 0;
+}
